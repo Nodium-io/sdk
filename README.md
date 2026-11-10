@@ -74,6 +74,15 @@ claude mcp add --transport http nodium https://nodium.io/api/v1/mcp \
   --header "Authorization: Bearer $NODIUM_KEY"
 ```
 
+## Related repositories
+
+| Repository | What it is |
+|---|---|
+| [whatsapp-saas-starter](https://github.com/Nodium-io/whatsapp-saas-starter) | A Next.js app that connects your SaaS customers' WhatsApp numbers |
+| [n8n-nodes-nodium](https://github.com/Nodium-io/n8n-nodes-nodium) | n8n nodes: a trigger on incoming messages, and an action that sends |
+| [agent-skills](https://github.com/Nodium-io/agent-skills) | `AGENTS.md`, a Claude Code skill and the MCP configuration |
+| [openapi](https://github.com/Nodium-io/openapi) | The OpenAPI 3.1 description of the API |
+
 ## Learn more
 
 - [How to add WhatsApp to your SaaS](https://nodium.io/en/guides/add-whatsapp-to-your-saas)
