@@ -1,0 +1,21 @@
+{
+  "compilerOptions": {
+    "target": "ES2022",
+    "module": "ESNext",
+    "moduleResolution": "Bundler",
+    "lib": ["ES2022", "DOM"],
+    "types": ["node"],
+    "strict": true,
+    "noUncheckedIndexedAccess": true,
+    "skipLibCheck": true,
+    "isolatedModules": true,
+    "outDir": "dist",
+    "rootDir": "src",
+    "declaration": false,
+    "paths": {
+      "@nodium.io/whatsapp": ["../whatsapp/dist/index.d.ts"],
+      "@nodium.io/whatsapp/server": ["../whatsapp/dist/server.d.ts"]
+    }
+  },
+  "include": ["src"]
+}

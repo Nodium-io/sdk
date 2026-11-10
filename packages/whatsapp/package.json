@@ -1,0 +1,39 @@
+{
+  "name": "@nodium.io/whatsapp",
+  "version": "0.4.1",
+  "description": "TypeScript client for the Nodium WhatsApp API: send and receive WhatsApp messages, templates, Flows and broadcasts from your code, with typed responses and signed webhooks.",
+  "keywords": ["nodium", "whatsapp", "whatsapp-api", "whatsapp-cloud-api", "whatsapp-business-api", "whatsapp-flows", "cloud-api", "meta", "webhooks", "typescript", "sdk"],
+  "homepage": "https://nodium.io/en/docs/api",
+  "repository": { "type": "git", "url": "git+https://github.com/Nodium-io/sdk.git", "directory": "packages/whatsapp" },
+  "bugs": { "url": "https://github.com/Nodium-io/sdk/issues" },
+  "license": "MIT",
+  "author": "By-Tech.io",
+  "type": "module",
+  "engines": { "node": ">=20" },
+  "main": "./dist/cjs/index.js",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "import": { "types": "./dist/index.d.ts", "default": "./dist/index.js" },
+      "require": { "types": "./dist/cjs/index.d.ts", "default": "./dist/cjs/index.js" }
+    },
+    "./server": {
+      "import": { "types": "./dist/server.d.ts", "default": "./dist/server.js" },
+      "require": { "types": "./dist/cjs/server.d.ts", "default": "./dist/cjs/server.js" }
+    },
+    "./package.json": "./package.json"
+  },
+  "files": ["dist", "README.md", "LICENSE"],
+  "sideEffects": false,
+  "publishConfig": { "access": "public" },
+  "scripts": {
+    "build": "node scripts/build.mjs",
+    "typecheck": "tsc -p tsconfig.json --noEmit",
+    "prepublishOnly": "npm run typecheck && npm run build"
+  },
+  "devDependencies": {
+    "@types/node": "^26.4.0",
+    "typescript": "^5.9.2"
+  }
+}

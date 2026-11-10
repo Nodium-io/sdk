@@ -1,0 +1,28 @@
+{
+  "name": "@nodium.io/cli",
+  "version": "0.3.1",
+  "description": "The nodium command: the Nodium WhatsApp API from your terminal — numbers, conversations, templates, webhooks, clients, Flows — and your webhooks replayed to your local server, signed like production.",
+  "keywords": ["nodium", "cli", "whatsapp", "whatsapp-api", "whatsapp-cloud-api", "webhooks", "local-development"],
+  "homepage": "https://nodium.io/en/docs/api",
+  "repository": { "type": "git", "url": "git+https://github.com/Nodium-io/sdk.git", "directory": "packages/cli" },
+  "bugs": { "url": "https://github.com/Nodium-io/sdk/issues" },
+  "license": "MIT",
+  "author": "By-Tech.io",
+  "type": "module",
+  "engines": { "node": ">=20" },
+  "bin": { "nodium": "./dist/index.js" },
+  "files": ["dist", "README.md", "LICENSE"],
+  "publishConfig": { "access": "public" },
+  "scripts": {
+    "build": "node scripts/build.mjs",
+    "typecheck": "node scripts/build.mjs --check",
+    "prepublishOnly": "npm run build"
+  },
+  "dependencies": {
+    "@nodium.io/whatsapp": "^0.4.1"
+  },
+  "devDependencies": {
+    "@types/node": "^26.4.0",
+    "typescript": "^5.9.2"
+  }
+}

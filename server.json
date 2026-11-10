@@ -1,0 +1,23 @@
+{
+  "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
+  "name": "io.github.Nodium-io/whatsapp",
+  "title": "Nodium WhatsApp",
+  "description": "Operate WhatsApp from an agent: read conversations and contacts, send messages, by API key.",
+  "repository": { "url": "https://github.com/Nodium-io/sdk", "source": "github" },
+  "version": "1.0.0",
+  "websiteUrl": "https://nodium.io/en/docs/api/guide/mcp",
+  "remotes": [
+    {
+      "type": "streamable-http",
+      "url": "https://nodium.io/api/v1/mcp",
+      "headers": [
+        {
+          "name": "Authorization",
+          "description": "Bearer followed by your Nodium API key (nod_…), from Settings › API keys in the console.",
+          "isRequired": true,
+          "isSecret": true
+        }
+      ]
+    }
+  ]
+}
